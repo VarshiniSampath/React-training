@@ -1,0 +1,42 @@
+/**
+* Styles for index.html and its components.
+**/
+
+body{
+  font-family: Helvetica;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+    left: 30%;
+    position: absolute;
+}
+
+thead{
+  font-size: 15px;
+  text-align: center;
+}
+
+tbody{
+  font-size: 14px;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #3B73B1;
+    color: white;
+}
+
+.title{
+  text-align: left;
+  padding: 15px;
+  width: 400px;
+  word-wrap: break-word;
+}
