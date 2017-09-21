@@ -1,6 +1,7 @@
-[{"id":10,"author":"Eshel Kedemi","title":"The effects of unique spatial characteristics of 3D-IVR and 2D computerized environments on cognitive modifiability.","year":2017,"citations":12},
-  {"id":219,"author":"Ludovic Hoyet","title":"The role of interaction in virtual embodiment: Effects of the virtual hand representation","year":2016,"citations":20},
-  {"id":2,"author":"C.R. Wren","title":"Pfinder: Real-time tracking of human body","year":1955,"citations":785},
-  {"id":135,"author":"V.I. Pavlovic","title":"Visual interpretation of hand gestures for human-computer interaction: a review","year":1997,"citations":695},
-  {"id":1089,"author":"Sushmita Mitra","title":"Gesture Recognition: A Survey","year":2007,"citations":324}
+[
+  {"id":10,"author":"Eshel Kedemi","title":"The effects of unique spatial characteristics of 3D-IVR and 2D computerized environments on cognitive modifiability.","year":2017,"citationCount":12},
+  {"id":219,"author":"Ludovic Hoyet","title":"The role of interaction in virtual embodiment: Effects of the virtual hand representation","year":2016,"citationCount":20},
+  {"id":2,"author":"C.R. Wren","title":"Pfinder: Real-time tracking of human body","year":1955,"citationCount":785},
+  {"id":135,"author":"V.I. Pavlovic","title":"Visual interpretation of hand gestures for human-computer interaction: a review","year":1997,"citationCount":695},
+  {"id":1089,"author":"Sushmita Mitra","title":"Gesture Recognition: A Survey","year":2007,"citationCount":324}
 ]

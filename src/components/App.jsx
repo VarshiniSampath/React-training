@@ -12,11 +12,11 @@ import AddNewIcon from './AddNewIcon.jsx';
 
 export default class Table extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
       this.state = {
         jsonData: [],
-        sortOrder:{
+        sortOrder: {
           id: true,
           author: true,
           title: true
@@ -26,10 +26,10 @@ export default class Table extends React.Component {
     }
 
     // Function to pull data from the backend and set it to the state.
-    loadApiData(){
-      axios.get('/api/get/publications')
+    loadApiData() {
+      axios.get('/publications/')
         .then(result => {
-          this.setState({jsonData: result.data});
+          this.setState( {jsonData: result.data} );
         });
     }
 
@@ -37,7 +37,7 @@ export default class Table extends React.Component {
     * Function to sort the data in the state by a key.
     * @param key The key name in the JSON data. Can be one of 'id', 'author', 'title', 'year', 'citations'
     **/
-    sortJsonDataByKey(key){
+    sortJsonDataByKey(key) {
       var tempData = this.state.jsonData;
       var sortOrder = this.state.sortOrder[key];
       tempData.sort( (a, b) => {
@@ -49,7 +49,7 @@ export default class Table extends React.Component {
         }
       });
       this.state.sortOrder[key] = !this.state.sortOrder[key];
-      this.setState({jsonData: tempData});
+      this.setState( {jsonData: tempData} );
     }
 
     // Loads data once the component has been mounted and rendered
@@ -60,7 +60,7 @@ export default class Table extends React.Component {
     // The render method renders the text 'Loading...' till data is unavailable.
     // Once data is queried from the backend, it populates the rows of the table.
      render() {
-     if (this.state.jsonData.length>0) {
+     if (this.state.jsonData.length > 0) {
       return (
         <div>
           <table>
@@ -70,12 +70,12 @@ export default class Table extends React.Component {
                 <th onClick={ () => this.sortJsonDataByKey('author') }> Author </th>
                 <th onClick={ () => this.sortJsonDataByKey('title') }> Title </th>
                 <th onClick={ () => this.sortJsonDataByKey('year') }> Year </th>
-                <th onClick={ () => this.sortJsonDataByKey('citations') }> Citations </th>
+                <th onClick={ () => this.sortJsonDataByKey('citationCount') }> Citations </th>
               </tr>
             </thead>
             <tbody>
               {this.state.jsonData.map((row) => {
-                return <TableRow key={'row' + row.id} rowData = {row}/>;
+                return <TableRow key={'row' + row.id} rowData={row}/>;
               })}
             </tbody>
           </table>
@@ -83,7 +83,7 @@ export default class Table extends React.Component {
         </div>
       );
       } else {
-        return <div> Loading... </div>;
+        return <div>Loading...</div>;
       }
     }
 };
@@ -91,9 +91,9 @@ export default class Table extends React.Component {
 /**
 * Component for each row of the table. Holds details of each publication.
 **/
-class TableRow extends React.Component{
+class TableRow extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       row: this.props.rowData
@@ -107,7 +107,7 @@ class TableRow extends React.Component{
         <td key={this.state.row.author}>{this.state.row.author}</td>
         <td key={this.state.row.title} className='title'>{this.state.row.title}</td>
         <td key={this.state.row.year}>{this.state.row.year}</td>
-        <td key={this.state.row.citations}>{this.state.row.citations}</td>
+        <td key={this.state.row.citationCount}>{this.state.row.citationCount}</td>
       </tr>
     );
   }

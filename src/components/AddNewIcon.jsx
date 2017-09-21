@@ -9,26 +9,26 @@ import AddNewModal from './AddNewModal.jsx';
 
 export default class AddNewIcon extends React.Component{
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       isOpen: false
     };
   }
 
-  openModalDialog(){
+  openModalDialog() {
     console.log('Clicked');
     this.setState({ isOpen: true });
   }
 
-  closeModalDialog(){
+  closeModalDialog() {
     this.setState({ isOpen: false });
   }
 
-  render(){
+  render() {
     return (
       <div>
-        <img src = 'src/components/images/plus.png' onClick={() => this.openModalDialog()}/>
+        <img src='src/components/images/plus.png' onClick={() => this.openModalDialog()}/>
         <AddNewModal isOpen={this.state.isOpen} onClose={() => this.closeModalDialog()}/>
       </div>
     );
