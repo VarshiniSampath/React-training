@@ -24406,10 +24406,10 @@ var _AddNewIcon2 = _interopRequireDefault(_AddNewIcon);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
-* Component for the table that contains the list of publications.
-* Handles loading the data from the backend and populating the table row-by-row.
-* Also has a generic function that can sort the table based on a column.
-**/
+ * Component for the table that contains the list of publications.
+ * Handles loading the data from the backend and populating the table row-by-row.
+ * Also has a generic function that can sort the table based on a column.
+ **/
 
 var Table = function (_React$Component) {
   (0, _inherits3.default)(Table, _React$Component);
@@ -24445,9 +24445,9 @@ var Table = function (_React$Component) {
     }
 
     /**
-    * Function to sort the data in the state by a key.
-    * @param key The key name in the JSON data. Can be one of 'id', 'author', 'title', 'year', 'citations'
-    **/
+     * Function to sort the data in the state by a key.
+     * @param key The key name in the JSON data. Can be one of 'id', 'author', 'title', 'year', 'citations'
+     **/
 
   }, {
     key: 'sortJsonDataByKey',
@@ -24557,8 +24557,8 @@ exports.default = Table;
 ;
 
 /**
-* Component for each row of the table. Holds details of each publication.
-**/
+ * Component for each row of the table. Holds details of each publication.
+ **/
 
 var TableRow = function (_React$Component2) {
   (0, _inherits3.default)(TableRow, _React$Component2);
@@ -36593,7 +36593,7 @@ exports = module.exports = __webpack_require__(135)(undefined);
 
 
 // module
-exports.push([module.i, "/**\n* Styles for index.html and its components.\n**/\n\nbody{\n  font-family: Helvetica;\n}\n\ntable {\n    border-collapse: collapse;\n    margin: 20px;\n    left: 30%;\n    position: absolute;\n}\n\nthead{\n  font-size: 15px;\n  text-align: center;\n}\n\ntbody{\n  font-size: 14px;\n}\n\nth, td {\n    text-align: left;\n    padding: 15px;\n}\n\ntr:nth-child(even){background-color: #f2f2f2}\n\nth {\n    background-color: #3B73B1;\n    color: white;\n}\n\n.title{\n  text-align: left;\n  padding: 15px;\n  width: 400px;\n  word-wrap: break-word;\n}\n", ""]);
+exports.push([module.i, "/**\r\n* Styles for index.html and its components.\r\n**/\r\n\r\nbody{\r\n  font-family: Helvetica;\r\n}\r\n\r\ntable {\r\n    border-collapse: collapse;\r\n    margin: 20px;\r\n    left: 30%;\r\n    position: absolute;\r\n}\r\n\r\nthead{\r\n  font-size: 15px;\r\n  text-align: center;\r\n}\r\n\r\ntbody{\r\n  font-size: 14px;\r\n}\r\n\r\nth, td {\r\n    text-align: left;\r\n    padding: 15px;\r\n}\r\n\r\ntr:nth-child(even){background-color: #f2f2f2}\r\n\r\nth {\r\n    background-color: #3B73B1;\r\n    color: white;\r\n}\r\n\r\n.title{\r\n  text-align: left;\r\n  padding: 15px;\r\n  width: 400px;\r\n  word-wrap: break-word;\r\n}\r\n", ""]);
 
 // exports
 
@@ -36739,9 +36739,9 @@ var _AddNewModal2 = _interopRequireDefault(_AddNewModal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
-* Component for Add button.
-* Handles opening/closing of the dialog box.
-**/
+ * Component for Add button.
+ * Handles opening/closing of the dialog box.
+ **/
 
 var AddNewIcon = function (_React$Component) {
   (0, _inherits3.default)(AddNewIcon, _React$Component);
@@ -36800,7 +36800,7 @@ exports = module.exports = __webpack_require__(135)(undefined);
 
 
 // module
-exports.push([module.i, "/**\n* Styles for the Add icon, Modal dialog and its components.\n**/\n\nimg {\n  position: absolute;\n  bottom: 5%;\n  right: 7%;\n}\n\nimg:hover {\n  cursor: pointer;\n}\n\n.overlay {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0px;\n  left: 0px;\n  z-index: 9998;\n  background: rgba(0, 0, 0, 0.3);\n}\n\n.dialog {\n  width: 500px;\n  height: 500px;\n  position: absolute;\n  top: 25%;\n  left: 45%;\n  //transform: translate(-50%, -50%);\n  z-index: 9999;\n  border-radius: 5px;\n  background-color: #eee;\n  padding: 20px;\n  font-family: Helvetica;\n}\n\nlabel {\n  font-size: 16px;\n}\n\ninput[type=text], input[type=number] {\n    width: 100%;\n    padding: 12px 20px;\n    margin: 15px 0;\n    display: inline-block;\n    border: 1px solid #ccc;\n    border-radius: 4px;\n    box-sizing: border-box;\n}\n\ninput[type=submit] {\n    width: 100%;\n    background-color: #3B73B1;\n    color: white;\n    padding: 14px 25px;\n    margin: 8px 0;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n}\n\ninput[type=submit]:hover, input[type=button]:hover {\n    background-color: #2F5C8D;\n}\n\nspan {\n  color: #8e8e8e;\n  font-size: 18px;\n  float: right;\n  padding-right: 15px;\n}\n\nspan:hover {\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "/**\r\n* Styles for the Add icon, Modal dialog and its components.\r\n**/\r\n\r\nimg {\r\n  position: absolute;\r\n  bottom: 5%;\r\n  right: 7%;\r\n}\r\n\r\nimg:hover {\r\n  cursor: pointer;\r\n}\r\n\r\n.overlay {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0px;\r\n  left: 0px;\r\n  z-index: 9998;\r\n  background: rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.dialog {\r\n  width: 500px;\r\n  height: 500px;\r\n  position: absolute;\r\n  top: 25%;\r\n  left: 45%;\r\n  //transform: translate(-50%, -50%);\r\n  z-index: 9999;\r\n  border-radius: 5px;\r\n  background-color: #eee;\r\n  padding: 20px;\r\n  font-family: Helvetica;\r\n}\r\n\r\nlabel {\r\n  font-size: 16px;\r\n}\r\n\r\ninput[type=text], input[type=number] {\r\n    width: 100%;\r\n    padding: 12px 20px;\r\n    margin: 15px 0;\r\n    display: inline-block;\r\n    border: 1px solid #ccc;\r\n    border-radius: 4px;\r\n    box-sizing: border-box;\r\n}\r\n\r\ninput[type=submit] {\r\n    width: 100%;\r\n    background-color: #3B73B1;\r\n    color: white;\r\n    padding: 14px 25px;\r\n    margin: 8px 0;\r\n    border: none;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n}\r\n\r\ninput[type=submit]:hover, input[type=button]:hover {\r\n    background-color: #2F5C8D;\r\n}\r\n\r\nspan {\r\n  color: #8e8e8e;\r\n  font-size: 18px;\r\n  float: right;\r\n  padding-right: 15px;\r\n}\r\n\r\nspan:hover {\r\n  cursor: pointer;\r\n}\r\n", ""]);
 
 // exports
 
@@ -36847,9 +36847,9 @@ var _modal2 = _interopRequireDefault(_modal);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
-* Component for Modal Dialog.
-* Contains the form that allows users to add a new publication to the data.
-**/
+ * Component for Modal Dialog.
+ * Contains the form that allows users to add a new publication to the data.
+ **/
 
 var AddNewModal = function (_React$Component) {
   (0, _inherits3.default)(AddNewModal, _React$Component);
@@ -36864,9 +36864,9 @@ var AddNewModal = function (_React$Component) {
 
 
     /**
-    * Function to call the close method in enclosing Component when Close icon/background overlay is clicked.
-    * @param e Javascript click event
-    **/
+     * Function to call the close method in enclosing Component when Close icon/background overlay is clicked.
+     * @param e Javascript click event
+     **/
     value: function closeDialog(e) {
       e.preventDefault();
       if (this.props.onClose) {

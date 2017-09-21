@@ -5,10 +5,10 @@ import styles from './css/index.css';
 import AddNewIcon from './AddNewIcon.jsx';
 
 /**
-* Component for the table that contains the list of publications.
-* Handles loading the data from the backend and populating the table row-by-row.
-* Also has a generic function that can sort the table based on a column.
-**/
+ * Component for the table that contains the list of publications.
+ * Handles loading the data from the backend and populating the table row-by-row.
+ * Also has a generic function that can sort the table based on a column.
+ **/
 
 export default class Table extends React.Component {
 
@@ -34,17 +34,16 @@ export default class Table extends React.Component {
     }
 
     /**
-    * Function to sort the data in the state by a key.
-    * @param key The key name in the JSON data. Can be one of 'id', 'author', 'title', 'year', 'citations'
-    **/
+     * Function to sort the data in the state by a key.
+     * @param key The key name in the JSON data. Can be one of 'id', 'author', 'title', 'year', 'citations'
+     **/
     sortJsonDataByKey(key) {
-      var tempData = this.state.jsonData;
-      var sortOrder = this.state.sortOrder[key];
+      let tempData = this.state.jsonData;
+      const sortOrder = this.state.sortOrder[key];
       tempData.sort( (a, b) => {
         if (sortOrder) {
           return a[key] > b[key];
-        }
-        else{
+        } else {
           return a[key] < b[key];
         }
       });
@@ -89,8 +88,8 @@ export default class Table extends React.Component {
 };
 
 /**
-* Component for each row of the table. Holds details of each publication.
-**/
+ * Component for each row of the table. Holds details of each publication.
+ **/
 class TableRow extends React.Component {
 
   constructor(props) {

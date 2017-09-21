@@ -1,7 +1,7 @@
 require('babel-register');
 
-var express = require('express');
-var server = express();
+const express = require('express');
+const server = express();
 
 // All URL resolving is handled in controllers/routes.js file
 require('./controllers/routes.js')(server);

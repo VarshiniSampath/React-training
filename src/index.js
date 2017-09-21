@@ -6,9 +6,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Table from './components/App.jsx';
 
-var ES6Promise = require("es6-promise");
+const ES6Promise = require("es6-promise");
 ES6Promise.polyfill();
-var jsonData = null;
+let jsonData = null;
 
 // Renders Table component from App.jsx
 ReactDOM.render(<Table/>, document.getElementById('app'));

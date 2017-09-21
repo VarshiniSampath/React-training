@@ -3,9 +3,9 @@ import styles from './css/modal.css';
 import AddNewModal from './AddNewModal.jsx';
 
 /**
-* Component for Add button.
-* Handles opening/closing of the dialog box.
-**/
+ * Component for Add button.
+ * Handles opening/closing of the dialog box.
+ **/
 
 export default class AddNewIcon extends React.Component{
 
@@ -28,8 +28,8 @@ export default class AddNewIcon extends React.Component{
   render() {
     return (
       <div>
-        <img src='src/components/images/plus.png' onClick={() => this.openModalDialog()}/>
-        <AddNewModal isOpen={this.state.isOpen} onClose={() => this.closeModalDialog()}/>
+        <img src='src/components/images/plus.png' onClick={() => this.openModalDialog()} />
+        <AddNewModal isOpen={this.state.isOpen} onClose={() => this.closeModalDialog()} />
       </div>
     );
   };
