@@ -63,19 +63,19 @@ module.exports = (server) => {
     } else if (fileExtension === '.js') {
       contentType = 'application/javascript';
     } else if (fileExtension === '.png') {
-         contentType = 'image/png';
+      contentType = 'image/png';
     }
 
     fs.readFile(filePath, (error, content) => {
-       if (!error) {
-         response.writeHead(200, { 'Content-Type': "'" + contentType + ";charset=utf-8" });
-         response.write(content);
-         response.end();
-       } else {
-         console.log(error);
-         response.writeHead(500);
-         response.end();
-       }
+      if (!error) {
+        response.writeHead(200, { 'Content-Type': "'" + contentType + ";charset=utf-8" });
+        response.write(content);
+        response.end();
+      } else {
+        console.log(error);
+        response.writeHead(500);
+        response.end();
+      }
     });
    });
 };

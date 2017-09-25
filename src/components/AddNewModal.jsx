@@ -20,7 +20,6 @@ export default class AddNewModal extends React.Component {
   }
 
   render() {
-    //console.log(this.props.isOpen);
     if (this.props.isOpen) {
       return (
         <div>
