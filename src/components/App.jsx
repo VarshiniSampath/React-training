@@ -75,8 +75,8 @@ export default class Table extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.jsonData.map((row) => {
-                return <TableRow key={'row' + row.id} id={row.id} author={row.author} title={row.title} year={row.year} citationCount={row.citationCount} />;
+              {this.state.jsonData.map((row, index) => {
+                return <TableRow key={'row' + index} id={row.id} author={row.author} title={row.title} year={row.year} citationCount={row.citationCount} />;
               })}
             </tbody>
           </table>
@@ -96,10 +96,12 @@ class TableRow extends React.Component {
 
   constructor(props: Object) {
     super(props);
+    console.log(props);
   }
 
   render() {
     const {
+      key,
       id,
       author,
       title,
@@ -107,12 +109,12 @@ class TableRow extends React.Component {
       citationCount,
     } = this.props;
     return (
-      <tr>
-        <td key={id}>{id}</td>
-        <td key={author}>{author}</td>
-        <td key={title} className='title'>{title}</td>
-        <td key={year}>{year}</td>
-        <td key={citationCount}>{citationCount}</td>
+      <tr key={key}>
+        <td>{id}</td>
+        <td>{author}</td>
+        <td className='title'>{title}</td>
+        <td>{year}</td>
+        <td>{citationCount}</td>
       </tr>
     );
   }
