@@ -19,7 +19,9 @@ export default class Table extends React.Component {
         sortOrder: {
           id: true,
           author: true,
-          title: true
+          title: true,
+          year: true,
+          citationCount: true
         }
       }
       this.loadApiData = this.loadApiData.bind(this);
@@ -74,7 +76,7 @@ export default class Table extends React.Component {
             </thead>
             <tbody>
               {this.state.jsonData.map((row) => {
-                return <TableRow key={'row' + row.id} rowData={row}/>;
+                return <TableRow key={'row' + row.id} id={row.id} author={row.author} title={row.title} year={row.year} citationCount={row.citationCount} />;
               })}
             </tbody>
           </table>
@@ -92,21 +94,25 @@ export default class Table extends React.Component {
  **/
 class TableRow extends React.Component {
 
-  constructor(props) {
+  constructor(props: Object) {
     super(props);
-    this.state = {
-      row: this.props.rowData
-    };
   }
 
   render() {
+    const {
+      id,
+      author,
+      title,
+      year,
+      citationCount,
+    } = this.props;
     return (
       <tr>
-        <td key={this.state.row.id}>{this.state.row.id}</td>
-        <td key={this.state.row.author}>{this.state.row.author}</td>
-        <td key={this.state.row.title} className='title'>{this.state.row.title}</td>
-        <td key={this.state.row.year}>{this.state.row.year}</td>
-        <td key={this.state.row.citationCount}>{this.state.row.citationCount}</td>
+        <td key={id}>{id}</td>
+        <td key={author}>{author}</td>
+        <td key={title} className='title'>{title}</td>
+        <td key={year}>{year}</td>
+        <td key={citationCount}>{citationCount}</td>
       </tr>
     );
   }

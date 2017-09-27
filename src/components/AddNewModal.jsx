@@ -1,17 +1,51 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import styles from './css/modal.css';
+
+// A stateless component for rendering the label and input box in the modal dialog box.
+class InputBox extends Component {
+
+  constructor(props: Object) {
+    super(props);
+  }
+
+  render() {
+    const  {
+      type,
+      label,
+      name,
+      placeholder,
+    } = this.props;
+    return (
+      <div>
+        <label htmlFor={name}>{label}</label>
+        <input
+          name={name}
+          placeholder={placeholder}
+          type={type}
+        />
+      </div>
+    );
+  }
+}
+
+InputBox.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
+};
 
 /**
  * Component for Modal Dialog.
  * Contains the form that allows users to add a new publication to the data.
  **/
 
-export default class AddNewModal extends React.Component {
+export default class AddNewModal extends Component {
 
-/**
- * Function to call the close method in enclosing Component when Close icon/background overlay is clicked.
- * @param e Javascript click event
- **/
+  /**
+   * Function to call the close method in enclosing Component when Close icon/background overlay is clicked.
+   * @param e Javascript click event
+   **/
   closeDialog(e) {
     e.preventDefault();
     if (this.props.onClose) {
@@ -26,16 +60,11 @@ export default class AddNewModal extends React.Component {
           <div className='dialog'>
             <form method='post' action='/publications/'>
               <span onClick={e => this.closeDialog(e)}>x</span>
-              <label htmlFor='title'>Title</label>
-              <input type='text' name='title' placeholder='Enter title of the paper' required />
-              <label htmlFor='author'>Author</label>
-              <input type='text' name='author' placeholder='Enter author name' required />
-              <label htmlFor='id'>ID</label>
-              <input type='number' name='id' placeholder='Enter publication ID' required />
-              <label htmlFor='year'>Year of publication</label>
-              <input type='number' name='year' placeholder='Enter year of publication' required />
-              <label htmlFor='citationCount'>Citation Count</label>
-              <input type='number' name='citationCount' placeholder='Enter #citations' required />
+              <InputBox label='Title' type='text' name='title' placeholder='Enter publication title'/>
+              <InputBox label='Author' type='text' name='author' placeholder='Enter author name'/>
+              <InputBox label='ID' type='text' name='id' placeholder='Enter publication ID'/>
+              <InputBox label='Year of publication' type='number' name='year' placeholder='Enter year of publication'/>
+              <InputBox label='Citation Count' type='number' name='citationCount' placeholder='Enter #citations'/>
               <input type='submit' value='Submit' />
              </form>
             </div>

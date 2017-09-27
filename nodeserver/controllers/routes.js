@@ -17,9 +17,10 @@ module.exports = (server) => {
     response.sendFile(path.resolve('./public/index.html'));
   });
 
-  // This API call can be used to get the current data.
-  // Reads data from JSON file and returns it.
-  // Using a JSON file since the data is small. Can be extended to DB.
+  /** This API call can be used to get the current data.
+   * Reads data from JSON file and returns it.
+   * Using a JSON file since the data is small. Can be extended to DB.
+   **/
   server.get('/publications/', (request, response) => {
     const fileContent = fs.readFileSync('data/publications.json');
     const jsonContent = JSON.parse(fileContent);
