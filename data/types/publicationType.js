@@ -8,7 +8,7 @@ const publicationType = new GraphQLObjectType({
   fields: () => ({
     doi: {
       type: GraphQLString,
-      description: 'DOI of the paper',
+      description: 'Digital Object Identifier(DOI) of the paper',
     },
     title: {
       type: GraphQLString,
@@ -20,11 +20,11 @@ const publicationType = new GraphQLObjectType({
     },
     year: {
       type: GraphQLInt,
-      description: 'Title of the paper',
+      description: 'Year of publication of the paper',
     },
     citationCount : {
       type: GraphQLInt,
-      description: 'Title of the paper',
+      description: 'Citation count of the paper',
     }
   }),
 });

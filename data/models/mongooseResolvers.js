@@ -37,4 +37,25 @@ const getPublications = () => {
   });
 }
 
-module.exports = { getPublication, getPublications, getPublicationByDOI };
+/** Function to insert a publication to the DB.
+ * @param args JSON object with key as 'input' and value od insertPublicationInput type.
+ * Returns error if error occurs, and the data that was inserted if inserted successfully.
+ **/
+const insertPublication = (args) => {
+  const input = args.input;
+  console.log('Inserting new publication to DB');
+  return new Promise((resolve, reject) => {
+    var newPublication = new mongoPublicationModel({
+      doi: input.doi,
+      title: input.title,
+      author: input.author,
+      year: input.year,
+      citationCount: input.citationCount
+    });
+    newPublication.save((err, data) => {
+      err ? reject(err) : resolve(data);
+    });
+  });
+};
+
+module.exports = { getPublication, getPublications, getPublicationByDOI, insertPublication };

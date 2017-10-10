@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-
 // Schema that maps the data in the collection 'papers'.
 const mongoPublicationSchema = new mongoose.Schema({
   doi: String,
