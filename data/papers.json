@@ -1,0 +1,6 @@
+// Exported from MongoDB. Database name - publications, collection - papers.
+
+{"_id":{"$oid":"59d3fe6743415fa0cd71842e"},"doi":"10.1145/2714064.2660199","title":"The HipHop Virtual Machine","author":"Guilherme Ottoni","year":2014.0,"citationCount":"18"}
+{"_id":{"$oid":"59d3fee943415fa0cd71842f"},"doi":"10.1145/2063384.2063420","title":"High-efficiency server design","author":"Eiten Frachtenberg","year":2011.0,"citationCount":"34"}
+{"_id":{"$oid":"59d4000743415fa0cd718431"},"doi":"arXiv:1611.08408","title":"Semantic Segmentation using Adversarial Networks","author":"P Luc","year":2016.0,"citationCount":"22"}
+{"_id":{"$oid":"59d4006d43415fa0cd718432"},"doi":"10.1145/2523616.2523621","title":"Virtual Network Diagnosis as a Service","author":"Wenfei Wu","year":2013.0,"citationCount":"17"}
