@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# Relay generated code
+__generated__

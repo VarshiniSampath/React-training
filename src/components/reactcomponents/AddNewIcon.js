@@ -16,7 +16,6 @@ export default class AddNewIcon extends React.Component{
   }
 
   openModalDialog() {
-    console.log('Clicked');
     this.setState({ isOpen: true });
   }
 

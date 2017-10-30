@@ -29,13 +29,6 @@ class InputBox extends Component {
   }
 };
 
-// // InputBox.propTypes = {
-//   label: PropTypes.string.isRequired,
-//   name: PropTypes.string.isRequired,
-//   placeholder: PropTypes.string.isRequired,
-//   type: PropTypes.string.isRequired
-// };
-
 /**
  * Component for Modal Dialog.
  * Contains the form that allows users to add a new publication to the data.
@@ -45,7 +38,6 @@ export default class AddNewModal extends Component {
 
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.saveForm = this.saveForm.bind(this);
   }
 
@@ -72,8 +64,6 @@ export default class AddNewModal extends Component {
         citationCount: parseInt(form.elements['citationCount'].value)
       }
     }
-    console.log('Passing the following object');
-    console.log(args);
     SaveFormMutation(modernEnvironment, args, (data, err) => console.log(data));
     window.location = '/';
   }

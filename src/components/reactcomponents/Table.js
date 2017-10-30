@@ -24,11 +24,11 @@ class Table extends React.Component {
         <table>
           <thead>
             <tr>
-              <th onClick={ () => this.sortJsonDataByKey('doi') }> DOI </th>
-              <th onClick={ () => this.sortJsonDataByKey('author') }> Author </th>
-              <th onClick={ () => this.sortJsonDataByKey('title') }> Title </th>
-              <th onClick={ () => this.sortJsonDataByKey('year') }> Year </th>
-              <th onClick={ () => this.sortJsonDataByKey('citationCount') }> Citations </th>
+              <th onClick={ () => this.sortJsonDataByKey('doi') }>DOI</th>
+              <th onClick={ () => this.sortJsonDataByKey('author') }>Author</th>
+              <th onClick={ () => this.sortJsonDataByKey('title') }>Title</th>
+              <th onClick={ () => this.sortJsonDataByKey('year') }>Year</th>
+              <th onClick={ () => this.sortJsonDataByKey('citationCount') }>Citations</th>
             </tr>
           </thead>
           <tbody>

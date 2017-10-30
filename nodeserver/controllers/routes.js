@@ -24,11 +24,8 @@ module.exports = (server) => {
   // Common resolve for all other kinds of URL.
   server.get('*', (request, response) => {
 
-    console.log('hey');
-
     const filePath = path.join('./public/' + request.url);
     const fileExtension = path.extname(filePath);
-    console.log(filePath);
     console.log(request.url + " " + fileExtension);
     let contentType = 'text/html';
 
